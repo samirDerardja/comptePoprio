@@ -1,0 +1,2 @@
+<app-proprietaire-data [proprietaire]='proprietaire' (selectEmitt)='voirComptes = $event'></app-proprietaire-data>
+<app-compte-data *ngIf='voirComptes' [accounts]="proprietaire?.accounts"></app-compte-data>

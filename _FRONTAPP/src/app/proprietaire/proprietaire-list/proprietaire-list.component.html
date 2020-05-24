@@ -1,0 +1,72 @@
+<!--
+L'élément mat-table transforme cette table en une table matérielle.
+ Avec l'attribut dataSource, nous fournissons une source de données pour notre table.
+  À l'intérieur de chaque balise ng-container, nous définissons la définition de la colonne et la valeur à afficher.
+   Il est très important de faire correspondre la valeur matColumnDef avec le nom de propriété de notre interface propriétaire.
+-->
+
+
+<div fxLayout fxLayout.lt-md="column wrap" fxLayoutAlign="center center" fxLayoutGap.gt-sm="250px" fxLayoutGap.lt.md="20px">
+  <mat-form-field>
+    <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+  <div>
+    <a [routerLink]="['/proprietaire/creer']" mat-button color="primary">Create Owner</a>
+  </div>
+</div>
+
+<table mat-table [dataSource]="dataSource" matSort (matSortChange)="customSort($event)">
+  <ng-container matColumnDef="nom">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+    <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dateDeNaissance">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de naissance </th>
+    <td mat-cell *matCellDef="let element"> {{element.dateDeNaissance | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="adresse">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Adresse </th>
+    <td mat-cell *matCellDef="let element"> {{element.adresse}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="details">
+    <th mat-header-cell *matHeaderCellDef> Details </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="primary" (click)="redirectToDetails(element.id)">
+          <mat-icon class="mat-18">reorder</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef> Mise à jour </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="accent" (click)="redirectToUpdate(element.id)">
+            <mat-icon class="mat-18">system_update</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Supprimer </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="warn" (click)="redirectToDelete(element.id)">
+              <mat-icon class="mat-18">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSize]="2" [pageSizeOptions]="[2, 4, 6, 10, 20]">
+</mat-paginator>
+
+<!--
+  Enfin, dans les deux dernières balises tr, nous définissons un ordre pour nos colonnes d'en-tête et les définitions de lignes.
+   Donc, ce que nous devons faire maintenant, c'est créer notre source de données et les propriétés affichées Columns
+   dans le fichier ownerlist.component.ts
+-->

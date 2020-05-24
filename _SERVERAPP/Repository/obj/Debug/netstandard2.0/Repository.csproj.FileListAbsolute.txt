@@ -1,0 +1,3 @@
+C:\owneraccount\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache
+C:\owneraccount\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+C:\owneraccount\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs

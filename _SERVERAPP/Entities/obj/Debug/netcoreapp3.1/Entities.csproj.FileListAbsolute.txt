@@ -1,0 +1,16 @@
+C:\owneraccount\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\owneraccount\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\owneraccount\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\owneraccount\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\owneraccount\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\owneraccount\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\owneraccount\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\owneraccount\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\taskAccount\_SERVERAPP\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\taskAccount\_SERVERAPP\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\taskAccount\_SERVERAPP\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\taskAccount\_SERVERAPP\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\taskAccount\_SERVERAPP\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\taskAccount\_SERVERAPP\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\taskAccount\_SERVERAPP\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\taskAccount\_SERVERAPP\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

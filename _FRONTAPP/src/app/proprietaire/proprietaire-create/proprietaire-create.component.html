@@ -1,0 +1,36 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+      <mat-card-title>Creer un nouveau proprietaire</mat-card-title>
+      <form [formGroup]="proprietaireGroup" autocomplete="off" novalidate (ngSubmit)="createOwner(proprietaireGroup.value)" fxLayout="column wrap"
+      fxLayoutAlign="center center" fxLayoutGap="10px">
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Nom propriètaire" formControlName="nom" id="nom">
+      <mat-hint align="end">maximum : 60 Charactères.</mat-hint>
+      <mat-error *ngIf="hasError('nom', 'required')">Le nom est requis</mat-error>
+      <mat-error *ngIf="hasError('nom', 'maxlength')">Charactères trop long ( + 60 )</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date de naissance" formControlName="dateDeNaissance" id="dateDeNaissance"
+          readonly (click)="picker.open()">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" placeholder="Adresse propriètaire" formControlName="adresse">
+      <mat-hint align="end">maximum : 100 Charactères.</mat-hint>
+      <mat-error *ngIf="hasError('adresse', 'required')">L' adresse est requis</mat-error>
+      <mat-error *ngIf="hasError('adresse', 'maxlength')">Charactères trop long ( + 100 )</mat-error>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-card-actions align="center">
+      <button mat-raised-button color="primary" [disabled]="!proprietaireGroup.valid">Creer</button>
+      <button type="button" mat-raised-button color="warn" (click)="onCancel()">Annuler</button>
+    </mat-card-actions>
+  </mat-card-actions>
+</form>
+    </mat-card>
+</section>

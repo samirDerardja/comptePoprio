@@ -1,0 +1,20 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-accordion fxFlex="500px" fxFlex.xs="100%">
+      <mat-expansion-panel *ngFor="let account of accounts; let i = index">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{i+1}}. Compte
+          </mat-panel-title>
+          <mat-panel-description>
+            Information du compte
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+          <div fxFlex="35%" class="text-color"><strong>type:</strong> &nbsp; {{account?.typeDeCompte}}</div>
+          <div fxFlex class="text-color"><strong>Date de création:</strong> &nbsp; {{account?.dateDeCreation | date}}</div>
+        </div>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+</section>
